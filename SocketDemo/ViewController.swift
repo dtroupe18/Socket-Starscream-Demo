@@ -118,9 +118,9 @@ extension ViewController: WebSocketDelegate {
     case .reconnectSuggested(_):
       break
     case .cancelled:
-      isConnected = false
+      self.isConnected = false
     case .error(let error):
-      isConnected = false
+      self.isConnected = false
       print("Received error: \(error?.localizedDescription ?? "")")
     }
   }
@@ -145,7 +145,7 @@ extension ViewController: WebSocketDelegate {
       let messageAuthor = messageData["author"] as? String,
       let messageText = messageData["text"] as? String {
 
-      displayNewMessage(msg: messageText, author: messageAuthor)
+      self.displayNewMessage(msg: messageText, author: messageAuthor)
     }
   }
 
@@ -165,7 +165,10 @@ extension ViewController: UITextFieldDelegate {
 
     let trimmed = txt.trimmingCharacters(in: .whitespacesAndNewlines)
     if !trimmed.isEmpty {
-      if !setName { setName = true }
+      if !self.setName {
+        self.promptLabel.text = "\(trimmed): "
+        self.setName = true
+      }
       self.sendSocketMessage(trimmed)
     }
 
