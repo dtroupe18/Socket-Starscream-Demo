@@ -1,8 +1,8 @@
 # Socket-Starscream-Demo
 
-Originally based off of [this tutorial](https://www.raywenderlich.com/861-websockets-on-ios-with-starscream) (outdated)
+Originally based off of [this tutorial](https://www.raywenderlich.com/861-websockets-on-ios-with-starscream) (outdated). This project uses [Starscream](https://github.com/daltoniam/Starscream) to handle socket connections.
 
-Steps to demo:
+## Steps to run demo:
 
 1. Install node if you don't have it.
 2. Open a terminal window and cd into the project directory then run `npm install websocket`.
@@ -15,3 +15,11 @@ Steps to demo:
 9. Run the app.
 10. Enter your name.
 11. Send a message using the app or the webpage previously opened, both should update in real time and display the conversation.
+
+## Server Screenshot
+
+![Alt Text](https://github.com/dtroupe18/Socket-Starscream-Demo/blob/master/ScreenShots/ServerScreenShot.png)
+
+## App Screenshot
+
+![Alt Text](https://github.com/dtroupe18/Socket-Starscream-Demo/blob/master/ScreenShots/AppScreenShot.png)
